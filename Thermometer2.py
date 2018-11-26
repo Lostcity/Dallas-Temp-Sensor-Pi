@@ -2,6 +2,7 @@ import os
 import glob
 import time
 from Adafruit_IO import *
+#the following are variables used by adafruit
 ADAFRUIT_IO_KEY = 'a352xxxxxxxxxxxxxxxxxxxxxxx'
 ADAFRUIT_IO_USERNAME = 'lostcity'
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
@@ -50,5 +51,7 @@ def read_temp():
 
 while True:
         print(read_temp())
-        aio.send('MyGarage',read_temp())
-        time.sleep(120)
+        #print limited to just temp in Celsius for the aio feed
+        aio.send('MyGarage',read_temp())  #Edit MyGarage to mygarage which fixed one of my feed problems so it was 
+	#correctly identified to the host. Info from Adafruit 
+        time.sleep(120) # limit feed interval to about 2 minutes to meet Feed server requirements. 
