@@ -2,7 +2,7 @@ import os
 import glob
 import time
 from Adafruit_IO import *
-ADAFRUIT_IO_KEY = 'a352cc95b65b43fdb28bac009b505379'
+ADAFRUIT_IO_KEY = 'a352xxxxxxxxxxxxxxxxxxxxxxx'
 ADAFRUIT_IO_USERNAME = 'lostcity'
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
